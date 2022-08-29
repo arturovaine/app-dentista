@@ -1,0 +1,20 @@
+{
+  "name": "app-dentista",
+  "version": "1.0.0",
+  "description": "## Entenda o problema: - Érica é uma dentista e atende seus pacientes apenas com atendimento particular. - Como alguns tratamentos dentários são caros e demorados de serem concluídos, o pagamento do tratamento do paciente pode ser parcelado. - A cada tratamento, ela anota num caderninho quanto e quando cada paciente deve pagar. - Para Érica saber quanto vai receber num determinado período, ela precisa somar cada valor na calculadora para conseguir esta informação.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arturovaine/app-dentista.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arturovaine/app-dentista/issues"
+  },
+  "homepage": "https://github.com/arturovaine/app-dentista#readme"
+}
