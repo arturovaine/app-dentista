@@ -1,4 +1,4 @@
-# Desafio Desenvolvedor React e NodeJS Jr
+# Desafio: Desenvolvedor React e NodeJS Jr
 
 ## Entenda o problema:
 - Érica é uma dentista e atende seus pacientes apenas com atendimento particular.
