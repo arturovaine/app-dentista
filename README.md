@@ -1,4 +1,4 @@
-# Desafio Desenvolvedor React e NodeJS Jr. 
+# Desafio Desenvolvedor React e NodeJS Jr
 
 ## Entenda o problema:
 - Érica é uma dentista e atende seus pacientes apenas com atendimento particular.
@@ -36,3 +36,6 @@ Ao finalizar o teste, você deve enviar para o email:
 - O link do projeto funcionando no Heroku;
 - No corpo do e-mail, escrever um breve resumo do que usou para resolver o problema
 proposto.
+
+---
+
