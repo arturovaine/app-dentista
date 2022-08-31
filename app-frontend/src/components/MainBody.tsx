@@ -1,11 +1,10 @@
 import React from 'react';
+import Table from './Table';
 
 const MainBody = () => {
   return (
     <div className="main-body">
-      <p>
-          Conteúdo<br /><br />
-      </p>
+      <Table />
     </div>
   );
 };

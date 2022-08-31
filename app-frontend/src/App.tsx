@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { FC } from 'react';
 import Header from './components/Header';
 import MainBody from './components/MainBody';
-// import logo from './logo.svg';
+import FormPayment from './components/FormPayment';
 import './App.css';
 
-function App() {
+const App: FC = () => {
   return (
     <div className="App">
       <Header />
+      <FormPayment />
       <MainBody />
     </div>
   );
