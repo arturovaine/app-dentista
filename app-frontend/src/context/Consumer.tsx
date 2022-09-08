@@ -1,6 +1,5 @@
 import Context from './Context';
-
-// const Context: any = createContext(null);
+import Table from '../components/Table';
 
 const Consumer = () => (
   <Context.Consumer>
@@ -12,6 +11,7 @@ const Consumer = () => (
         {
           JSON.stringify(context)
         }
+        <Table />
       </span>
     )}
   </Context.Consumer>

@@ -1,18 +1,20 @@
 import { FC } from 'react';
 // import FilterPayments from './components/FilterPayments';
-// import Header from './components/Header';
+import Header from './components/Header';
 // import MainBody from './components/MainBody';
 // import FormPayment from './components/FormPayment';
 // import Provider from './context/Provider';
 import './App.css';
 import Context from './context/Context';
 import Consumer from './context/Consumer';
-import data from './data/data';
+// import data from './data/data';
+import setDataToLocalStorage from './data/data2localStorage';
 
 const App: FC = () => {
   return (
     <div className="App">
-      <Context.Provider value={ data }>
+      <Context.Provider value={ setDataToLocalStorage() }>
+        <Header />
         <Consumer />
       </Context.Provider>
     </div>
