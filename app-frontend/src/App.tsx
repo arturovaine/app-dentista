@@ -1,17 +1,29 @@
-import React, { FC } from 'react';
-import Header from './components/Header';
-import MainBody from './components/MainBody';
-import FormPayment from './components/FormPayment';
+import { FC } from 'react';
+// import FilterPayments from './components/FilterPayments';
+// import Header from './components/Header';
+// import MainBody from './components/MainBody';
+// import FormPayment from './components/FormPayment';
+// import Provider from './context/Provider';
 import './App.css';
+import Context from './context/Context';
+import Consumer from './context/Consumer';
+import data from './data/data';
 
 const App: FC = () => {
   return (
     <div className="App">
-      <Header />
-      <FormPayment />
-      <MainBody />
+      <Context.Provider value={ data }>
+        <Consumer />
+      </Context.Provider>
     </div>
   );
 }
 
 export default App;
+
+/*
+<Header />
+        <FormPayment />
+        <FilterPayments />
+        <MainBody />
+*/
