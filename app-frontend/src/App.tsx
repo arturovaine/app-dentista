@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 // import FilterPayments from './components/FilterPayments';
 import Header from './components/Header';
 // import MainBody from './components/MainBody';
@@ -12,6 +12,8 @@ import setDataToLocalStorage from './data/data2localStorage';
 import Modal from './components/Modal';
 
 const App: FC = () => {
+  const [openModal, setOpenModal] = useState(false);
+
   return (
     <div className="App">
       <Context.Provider value={ setDataToLocalStorage() }>
