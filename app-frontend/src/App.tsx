@@ -9,12 +9,14 @@ import Context from './context/Context';
 import Consumer from './context/Consumer';
 // import data from './data/data';
 import setDataToLocalStorage from './data/data2localStorage';
+import Modal from './components/Modal';
 
 const App: FC = () => {
   return (
     <div className="App">
       <Context.Provider value={ setDataToLocalStorage() }>
         <Header />
+        <Modal />
         <Consumer />
       </Context.Provider>
     </div>

@@ -1,16 +1,17 @@
-import React from 'react'; //
+// import React from 'react';
 
 export function TableHeader() {
   return (
     <tr>
       {/*<th>Código</th>*/}
       <th>Data Atendimento</th>
-      <th>Nome</th>
       <th>Sobrenome</th>
-      <th>Valor pgto.</th>
-      <th>Pagamento parcelado</th>
+      <th>Nome</th>
+      <th>Pagamento (R$)</th>
+      <th>Parcelamento</th>
       <th>Parcela</th>
       <th>Total</th>
+      <th>Editar</th>
     </tr>
   );
 }
@@ -26,6 +27,7 @@ export function TableContent(item: any, index: number) {
       <td>{item.paymentInstallment} &nbsp; </td>
       <td>{item.paymentFraction} &nbsp; </td>
       <td>{item.paymentTotalValue.toFixed(2)} &nbsp; </td>
+      <td><button>Botão</button></td>
     </tr>
   );
 }
