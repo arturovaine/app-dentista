@@ -31,14 +31,6 @@ const Table = () => {
 
   return (
     <div className="main-table">
-      <input
-            name="name-filter"
-            id="name-filter"
-            data-testid="name-filter"
-            type="text"
-            placeholder="Filtrar por nome"
-            // onChange={ handleChange }
-        />
       <table>
         <thead>
           { TableHeader() }
