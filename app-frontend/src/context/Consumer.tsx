@@ -18,7 +18,7 @@ function Consumer() {
             className="openModalBtn"
             onClick={()=> {setOpenModal(true)}}
           >Open Modal</button>
-          { openModal && <Modal /> }
+          { openModal && <Modal closeModal={setOpenModal}/> }
           <br /><br />
           <table>
             <thead>
