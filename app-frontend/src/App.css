@@ -9,7 +9,7 @@
 }
 
 table {
-  position: absolute; 
+  /*position: absolute; */
   left: 0; 
   right: 0; 
   margin-left: auto; 
@@ -68,4 +68,35 @@ tbody tr:last-of-type {
 tbody tr.active-row {
   font-weight: bold;
   color: #256356;
+}
+
+.modal-background {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(200,200,200);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+}
+
+.modal-container {
+  width: 500px;
+  height: 500px;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+
+.modal-container .title {
+  display: inline-block;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.titleCloseBtn button {
+  background-color: transparent;
 }

@@ -2,8 +2,8 @@ import React from 'react';
 
 function Modal({ closeModal }: any) {
   return (
-    <div className='modalBackground'>
-      <div className='modalContainer'>
+    <div className='modal-background'>
+      <div className='modal-container'>
           <button onClick={() => closeModal(false)}> X </button>
         <div className='title'></div>
           <h1>Editar pagamento</h1>
