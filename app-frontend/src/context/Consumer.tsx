@@ -15,7 +15,7 @@ function Consumer() {
           Renderizando o context:
           <br /><br />
           <button
-            className="openModalBtn"
+            className="open-modal-btn"
             onClick={()=> {setOpenModal(true)}}
           >Open Modal</button>
           { openModal && <Modal closeModal={setOpenModal}/> }

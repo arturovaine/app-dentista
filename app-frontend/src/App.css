@@ -81,8 +81,8 @@ tbody tr.active-row {
 }
 
 .modal-container {
-  width: 500px;
-  height: 500px;
+  width: 50vw;
+  height: 50vh;
   border-radius: 12px;
   background-color: white;
   box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
@@ -97,6 +97,36 @@ tbody tr.active-row {
   margin-top: 10px;
 }
 
-.titleCloseBtn button {
+.title-close-btn button {
   background-color: transparent;
+  border: none;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.modal-container .body {
+  flex: 50%;
+  display: flex;
+  justify-content: center;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+.modal-container .footer {
+  flex: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-container .footer button {
+  width: 15vw;
+  height: 5vh;
+  margin: 10px;
+  border: none;
+  background-color: lightblue;
+  color: black;
+  border-radius: 8px;
+  font-size: 12px;
+  cursor: pointer;
 }
