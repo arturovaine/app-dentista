@@ -33,7 +33,7 @@ function Consumer() {
                     <td>{item.paymentFraction} &nbsp; </td>
                     <td>{item.paymentTotalValue.toFixed(2)} &nbsp; </td>
                     <td>
-                    <ButtonEdit />
+                    <ButtonEdit setShowModal={setShowModal} isOpen={isOpen}/>
                     <button
             className="open-modal-btn"
             onClick={()=> {setShowModal(isOpen)}}

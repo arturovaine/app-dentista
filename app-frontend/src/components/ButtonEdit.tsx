@@ -1,8 +1,6 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 
-function ButtonEdit() {
-  const isOpen = true;
-  const [showModal, setShowModal] = useState(!isOpen);
+function ButtonEdit({ setShowModal, isOpen}: any) {
   return (
     <button
       type='button'
