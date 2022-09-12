@@ -8,9 +8,9 @@ const FormPayment = () => {
         <label htmlFor="form-date">
           <input type="hidden" className="form-payment-code" placeholder=""/><br />
           <input type="date" className="form-payment-date" placeholder="0"/><br />
-          <input type="text" className="form-patient-name" placeholder="Sobrenome do paciente"/><br />
-          <input type="text" className="form-patient-name" placeholder="Nome do paciente"/><br />
-          <input type="number" className="form-payment-amount" placeholder="Valor total a receber"/><br />
+          <input type="text" className="form-patient-name" placeholder="Sobrenome"/><br />
+          <input type="text" className="form-patient-name" placeholder="Nome"/><br />
+          <input type="number" className="form-payment-amount" placeholder="Valor do pagamento"/><br />
           <select
             name=""
             id=""
@@ -30,7 +30,7 @@ const FormPayment = () => {
             <option value="cartaoCredito">Cartão de crédito</option>
             <option value="cartaoDebito">Cartão de débito</option>
           </select><br />
-          <input type="text" className="form-payment-total-amount" placeholder="300.00"/><br />
+          <input type="text" className="form-payment-total-amount" placeholder="Valor total"/><br />
           <button type="submit" className="btn btn-primary">Adicionar pagamento</button>
         </label>
       </form>

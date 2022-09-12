@@ -7,7 +7,7 @@ export default function setDataToLocalStorage() {
   let storageTextData: any = localStorage.getItem('paymentsData');
   let storageObjData: any = JSON.parse(storageTextData);
   let paymentsData = storageObjData;
-  console.log('Console DataTableContext:', paymentsData);
+  console.log('Console setDataToLocalStorage:', paymentsData);
 
   return paymentsData;
 }

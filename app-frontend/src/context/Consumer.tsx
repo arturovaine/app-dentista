@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Context from './Context';
-import { TableHeader } from '../helpers/helpers';
+import { TableHeader, TableRow } from '../helpers/helpers';
 import ButtonEdit from '../components/ButtonEdit';
 import Modal from '../components/Modal';
 
@@ -9,13 +9,19 @@ function Consumer() {
   const isOpen = true;
   const [showModal, setShowModal] = useState(!isOpen);
 
+  console.log(Context)
+
   return (
     <Context.Consumer>
       {(context: any) => (
         <span>
           Renderizando o context:
 
-          { showModal && <Modal handleModal={setShowModal}/> }
+          {
+            showModal
+            &&
+            <Modal stateFunction={setShowModal} stateToSet={isOpen} />
+          }
 
           <table>
             <thead>
@@ -33,12 +39,10 @@ function Consumer() {
                     <td>{item.paymentFraction} &nbsp; </td>
                     <td>{item.paymentTotalValue.toFixed(2)} &nbsp; </td>
                     <td>
-                    <ButtonEdit setShowModal={setShowModal} isOpen={isOpen}/>
-                    <button
-            className="open-modal-btn"
-            onClick={()=> {setShowModal(isOpen)}}
-          >Open Modal</button>
-          
+                    <ButtonEdit
+                      stateFunction={setShowModal}
+                      stateToSet={isOpen}
+                    />    
                     </td>
                   </tr>
                 ))

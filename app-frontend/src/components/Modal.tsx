@@ -1,11 +1,11 @@
 import FormPayment from './FormPayment';
 
-function Modal({ handleModal }: any) {
+function Modal({ stateFunction, stateToSet }: any) {
   return (
     <div className='modal-background'>
       <div className='modal-container'>
         <div className='title-close-btn'>
-          <button onClick={() => handleModal(false)}> &times; </button>
+          <button onClick={() => stateFunction(!stateToSet)}> &times; </button>
         </div>
         <div className='title'></div>
           {/*<h1>Editar pagamento</h1>*/}
@@ -13,7 +13,7 @@ function Modal({ handleModal }: any) {
           <FormPayment /> 
         </div>
         <div className='footer'>
-          <button onClick={() => handleModal(false)}>Cancel</button>
+          <button onClick={() => stateFunction(!stateToSet)}>Cancel</button>
           <button>Continue</button>
         </div>
       </div>      
