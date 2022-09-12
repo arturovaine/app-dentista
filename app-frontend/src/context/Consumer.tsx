@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import Context from './Context';
 import { TableHeader, TableRow } from '../helpers/helpers';
-import ButtonEdit from '../components/ButtonEdit';
 import Modal from '../components/Modal';
 
 
@@ -9,13 +8,15 @@ function Consumer() {
   const isOpen = true;
   const [showModal, setShowModal] = useState(!isOpen);
 
-  console.log(Context)
-
   return (
     <Context.Consumer>
       {(context: any) => (
         <span>
-          Renderizando o context:
+          <h2>Total: R$ { context.reduce(
+            (prevVal: any, curVal: any) => prevVal + curVal.paymentTotalValue,
+             0,
+            ).toFixed(2)
+          }</h2>
 
           {
             showModal
@@ -30,21 +31,12 @@ function Consumer() {
             <tbody>
               {
                 context.map((item: any, index: number) => (
-                  <tr key={ index }>
-                    <td>{item.appointmentDate} &nbsp; </td>
-                    <td>{item.patientLastName} &nbsp; </td>
-                    <td>{item.patientFirstName} &nbsp; </td>
-                    <td>{item.paymentValue.toFixed(2)} &nbsp; </td>
-                    <td>{item.paymentInstallment} &nbsp; </td>
-                    <td>{item.paymentFraction} &nbsp; </td>
-                    <td>{item.paymentTotalValue.toFixed(2)} &nbsp; </td>
-                    <td>
-                    <ButtonEdit
-                      stateFunction={setShowModal}
-                      stateToSet={isOpen}
-                    />    
-                    </td>
-                  </tr>
+                  <TableRow
+                  item={item}
+                  index={index}
+                  setShowModal={setShowModal}
+                  isOpen={isOpen}
+                  />
                 ))
               }
             </tbody>

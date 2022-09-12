@@ -4,12 +4,12 @@ const FormPayment = () => {
   return (
     <div className="form">
       <form className="form-payment">
-        Inserir pagamento: <br />
+        Editar pagamento <br />
         <label htmlFor="form-date">
           <input type="hidden" className="form-payment-code" placeholder=""/><br />
-          <input type="date" className="form-payment-date" placeholder="0"/><br />
-          <input type="text" className="form-patient-name" placeholder="Sobrenome"/><br />
-          <input type="text" className="form-patient-name" placeholder="Nome"/><br />
+          <input type="date" className="form-payment-text" placeholder="0"/><br />
+          <input type="text" className="form-patient-text" placeholder="Sobrenome"/><br />
+          <input type="text" className="form-patient-text" placeholder="Nome"/><br />
           <input type="number" className="form-payment-amount" placeholder="Valor do pagamento"/><br />
           <select
             name=""

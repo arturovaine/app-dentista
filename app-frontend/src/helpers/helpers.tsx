@@ -32,12 +32,7 @@ export function TableContent(item: any, index: number) {
   );
 }
 
-export function TableRow(
-  item: any,
-  index: number,
-  setShowModal: any,
-  isOpen: any
-  ) {
+export function TableRow({ item, index, setShowModal, isOpen }: any) {
   return (
     <tr key={ index }>
       <td>{item.appointmentDate} &nbsp; </td>
@@ -49,8 +44,9 @@ export function TableRow(
       <td>{item.paymentTotalValue.toFixed(2)} &nbsp; </td>
       <td>
       <ButtonEdit
-        stateFunction={setShowModal}
-        stateToSet={isOpen}
+        stateFunction={ setShowModal }
+        stateToSet={ isOpen }
+        itemToSet={ item }
       />    
       </td>
     </tr>

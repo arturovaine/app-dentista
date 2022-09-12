@@ -1,5 +1,5 @@
-import React, { useContext, useState, useEffect } from 'react';
-import { TableHeader, TableContent } from '../helpers/helpers';
+import { useContext, useState } from 'react';
+import { TableHeader } from '../helpers/helpers';
 import Context from '../context/Context';
 
 const Table = () => {
