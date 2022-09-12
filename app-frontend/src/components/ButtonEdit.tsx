@@ -1,7 +1,4 @@
-// import { useState } from 'react';
-
 function ButtonEdit({ stateFunction, stateToSet, itemToSet }: any) {
-  // console.log(itemToSet);
 
   const teste = () => {
     stateFunction(stateToSet);
