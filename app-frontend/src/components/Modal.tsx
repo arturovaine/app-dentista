@@ -1,21 +1,19 @@
-import React from 'react';
+import FormPayment from './FormPayment';
 
-function Modal({ closeModal }: any) {
+function Modal({ handleModal }: any) {
   return (
     <div className='modal-background'>
       <div className='modal-container'>
         <div className='title-close-btn'>
-          <button onClick={() => closeModal(false)}> &times; </button>
+          <button onClick={() => handleModal(false)}> &times; </button>
         </div>
         <div className='title'></div>
-          <h1>Editar pagamento</h1>
+          {/*<h1>Editar pagamento</h1>*/}
         <div className='body'>
-          <p>
-            Campos do pagamento a editar
-          </p>
+          <FormPayment /> 
         </div>
         <div className='footer'>
-          <button onClick={() => closeModal(false)}>Cancel</button>
+          <button onClick={() => handleModal(false)}>Cancel</button>
           <button>Continue</button>
         </div>
       </div>      

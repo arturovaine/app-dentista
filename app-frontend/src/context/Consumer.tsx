@@ -6,20 +6,17 @@ import Modal from '../components/Modal';
 
 
 function Consumer() {
-  const [openModal, setOpenModal] = useState(false);
+  const isOpen = true;
+  const [showModal, setShowModal] = useState(!isOpen);
 
   return (
     <Context.Consumer>
       {(context: any) => (
         <span>
           Renderizando o context:
-          <br /><br />
-          <button
-            className="open-modal-btn"
-            onClick={()=> {setOpenModal(true)}}
-          >Open Modal</button>
-          { openModal && <Modal closeModal={setOpenModal}/> }
-          <br /><br />
+
+          { showModal && <Modal handleModal={setShowModal}/> }
+
           <table>
             <thead>
               { TableHeader() }
@@ -37,6 +34,11 @@ function Consumer() {
                     <td>{item.paymentTotalValue.toFixed(2)} &nbsp; </td>
                     <td>
                     <ButtonEdit />
+                    <button
+            className="open-modal-btn"
+            onClick={()=> {setShowModal(isOpen)}}
+          >Open Modal</button>
+          
                     </td>
                   </tr>
                 ))
