@@ -15,23 +15,6 @@ export function TableHeader() {
   );
 }
 
-/*
-export function TableContent(item: any, index: number) {
-  return (
-    <tr key={ index }>
-      <td>{item.appointmentDate} &nbsp; </td>
-      <td>{item.patientLastName} &nbsp; </td>
-      <td>{item.patientFirstName} &nbsp; </td>
-      <td>{item.paymentValue.toFixed(2)} &nbsp; </td>
-      <td>{item.paymentInstallment} &nbsp; </td>
-      <td>{item.paymentFraction} &nbsp; </td>
-      <td>{item.paymentTotalValue.toFixed(2)} &nbsp; </td>
-      <td><button>Botão</button></td>
-    </tr>
-  );
-}
-*/
-
 export function TableRow({ item, index, setShowModal, isOpen }: any) {
   return (
     <tr key={ index }>
@@ -77,7 +60,7 @@ export function TablePayments({ context, setShowModal, isOpen }: any) {
 
 export function CounterPayments({ context, startDate, endDate }: any) {
   return (
-    <div>
+    <div className='div-counter-payments'>
       <h3>Total faturado no período: </h3>
       <h2>R$ {
             context
@@ -97,8 +80,8 @@ export function CounterPayments({ context, startDate, endDate }: any) {
 
 export function FilterPaymentsByDates({ setStartDate, setEndDate }: any) {
   return (
-    <div>
-    <br />
+    <div className='div-filter-payments'>
+      <h3>Filtrar pagamentos por datas</h3>
           Início: &nbsp;&nbsp;
           <input
             type='date'
@@ -116,7 +99,7 @@ export function FilterPaymentsByDates({ setStartDate, setEndDate }: any) {
             setEndDate(target.value);
             }}
           />
-        <br />
+        <br /><br />
   </div>
   )
 }

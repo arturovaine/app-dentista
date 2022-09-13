@@ -1,8 +1,6 @@
 import { useContext, useState, useEffect } from 'react';
 import Context from './Context';
 import {
-  TableHeader,
-  TableRow,
   CounterPayments,
   FilterPaymentsByDates,
   TablePayments
@@ -12,8 +10,8 @@ import Modal from '../components/Modal';
 
 function Consumer() {
   const isOpen = true;
-  const [showModal, setShowModal] = useState(!isOpen);
   const context = useContext(Context);
+  const [showModal, setShowModal] = useState(!isOpen);
   const [data, setData]: any = useState(context);
   const [startDate, setStartDate]: any = useState(Date.now());
   const [endDate, setEndDate]: any = useState(Date.now());
@@ -28,7 +26,7 @@ function Consumer() {
   return (
     <Context.Consumer>
       {(context: any) => (
-        <span>
+        <div>
           <FilterPaymentsByDates
             setStartDate={setStartDate}
             setEndDate={setEndDate}
@@ -38,19 +36,21 @@ function Consumer() {
             startDate={startDate}
             endDate={endDate}
           />
-          <br />
-
           {
             showModal
             &&
-            <Modal stateFunction={setShowModal} stateToSet={isOpen} />
+            <Modal
+              stateFunction={setShowModal}
+              stateToSet={isOpen}
+            />
           }
           <TablePayments
             context={context}
             setShowModal={setShowModal}
             isOpen={isOpen}
           />
-        </span>
+          <br /><br /><br /><br /><br /><br /><br />
+        </div>
       )}
     </Context.Consumer>)
 };

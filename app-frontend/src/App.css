@@ -78,7 +78,7 @@ tbody tr.active-row {
   /*height: 100%;*/
   /*background-color: rgb(218, 218, 218);*/
   /*opacity: 0.90;*/
-  position: fixed;
+  /*position: fixed;<--<--<-----*/
   /*display: flex;*/
   justify-content: center;
   align-items: center;  
@@ -93,6 +93,8 @@ tbody tr.active-row {
   /*display: flex;*/
   flex-direction: column;
   padding: 25px;
+  justify-content: center;
+  text-align: center;
 }
 
 .modal-container .title {
@@ -107,11 +109,6 @@ tbody tr.active-row {
   font-size: 25px;
   cursor: pointer;
   display: flex-end;
-}
-
-.modal-container {
-  justify-content: center;
-  text-align: center;
 }
 
 .modal-container .body {
@@ -186,4 +183,23 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.div-filter-payments {
+  border-radius: 5px;
+  border-color: #282c34;
+  background-color: #61dafb;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.div-counter-payments {
+  border-radius: 5px;
+  border-color: #282c34;
+  background-color: #61dafb;
+  padding: 10px;
+  margin-top: 5px;
+  width: 100%;  
 }
