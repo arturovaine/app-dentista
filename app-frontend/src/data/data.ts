@@ -1,7 +1,7 @@
 const data = [
   {
     id: 1,
-    appointmentDate: "2022-08-30",
+    appointmentDate: "2022-01-01",
     paymentDate: "2022-08-30",
     treatmentType: "Limpeza",
     patientLastName: "Silveira",
@@ -15,7 +15,7 @@ const data = [
   },
   {
     id: 2,
-    appointmentDate: "2022-08-30",
+    appointmentDate: "2022-02-01",
     paymentDate: "2022-08-30",
     treatmentType: "Restauro",
     patientLastName: "Santos",
@@ -29,7 +29,7 @@ const data = [
   },
   {
     id: 3,
-    appointmentDate: "2022-07-10",
+    appointmentDate: "2022-03-01",
     paymentDate: "2022-07-10",
     treatmentType: "Limpeza",
     patientLastName: "Silveira",
@@ -43,7 +43,7 @@ const data = [
   },
   {
     id: 4,
-    appointmentDate: "2022-06-10",
+    appointmentDate: "2022-04-01",
     paymentDate: "2022-06-10",
     treatmentType: "Limpeza",
     patientLastName: "Silveira",
@@ -57,7 +57,7 @@ const data = [
   },
   {
     id: 5,
-    appointmentDate: "2022-05-20",
+    appointmentDate: "2022-05-01",
     paymentDate: "2022-05-20",
     treatmentType: "Limpeza",
     patientLastName: "Silveira",
@@ -71,13 +71,13 @@ const data = [
   },
   {
     id: 6,
-    appointmentDate: "2022-03-30",
+    appointmentDate: "2022-06-01",
     paymentDate: "2022-03-30",
     treatmentType: "Limpeza",
     patientLastName: "Silveira",
     patientFirstName: "Luciana",
     convenio: "OdontoBrasil",
-    paymentValue: 410.00,
+    paymentValue: 300.00,
     paymentMethod: "Cartão de crédito",
     paymentInstallment: "Parcelado",
     paymentFraction: "1",
@@ -85,13 +85,13 @@ const data = [
   },
   {
     id: 7,
-    appointmentDate: "2022-02-22",
+    appointmentDate: "2022-07-01",
     paymentDate: "2022-02-22",
     treatmentType: "Limpeza",
     patientLastName: "Silva",
     patientFirstName: "Luiz",
     convenio: "OdontoBrasil",
-    paymentValue: 350.00,
+    paymentValue: 300.00,
     paymentMethod: "Cartão de débito",
     paymentInstallment: "Parcelado",
     paymentFraction: "1",
@@ -99,7 +99,7 @@ const data = [
   },
   {
     id: 8,
-    appointmentDate: "2022-08-12",
+    appointmentDate: "2022-08-01",
     paymentDate: "2022-08-12",
     treatmentType: "Limpeza",
     patientLastName: "Silveira",

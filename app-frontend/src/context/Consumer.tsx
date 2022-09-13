@@ -1,6 +1,11 @@
 import { useContext, useState, useEffect } from 'react';
 import Context from './Context';
-import { TableHeader, TableRow } from '../helpers/helpers';
+import {
+  TableHeader,
+  TableRow,
+  CounterPayments,
+  FilterPaymentsByDates
+} from '../helpers/helpers';
 import Modal from '../components/Modal';
 
 
@@ -23,38 +28,16 @@ function Consumer() {
     <Context.Consumer>
       {(context: any) => (
         <span>
-          <br />
-          Início: &nbsp;&nbsp;
-          <input
-            type='date'
-            id='startDateFilter'
-            onChange={({ target }) => {
-              setStartDate(target.value);
-              /*console.log(target.value);*/
-            }}
+          <FilterPaymentsByDates
+            setStartDate={setStartDate}
+            setEndDate={setEndDate}
           />
-          <br /><br />
-          Final: &nbsp;&nbsp;
-          <input
-            type='date'
-            id='endDateFilter'
-            onChange={({ target }) => {
-              setEndDate(target.value);
-              /*console.log(target.value);*/
-            }}
+          <CounterPayments
+            context={context}
+            startDate={startDate}
+            endDate={endDate}
           />
           <br />
-          <h2>Total: R$ {
-            context
-            .filter(
-              (item: any)=>(
-                Date.parse(item.appointmentDate) >= Date.parse(startDate)
-                && Date.parse(item.appointmentDate) <= Date.parse(endDate)))
-            .reduce(
-            (prevVal: any, curVal: any) => prevVal + curVal.paymentTotalValue,
-             0,
-            ).toFixed(2)
-          }</h2>
 
           {
             showModal
