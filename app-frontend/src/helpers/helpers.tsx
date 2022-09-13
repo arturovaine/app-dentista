@@ -3,7 +3,6 @@ import ButtonEdit from '../components/ButtonEdit';
 export function TableHeader() {
   return (
     <tr>
-      {/*<th>Código</th>*/}
       <th>Data Atendimento</th>
       <th>Sobrenome</th>
       <th>Nome</th>
@@ -16,10 +15,10 @@ export function TableHeader() {
   );
 }
 
+/*
 export function TableContent(item: any, index: number) {
   return (
     <tr key={ index }>
-      {/*<td>{item.id} &nbsp; </td>*/}
       <td>{item.appointmentDate} &nbsp; </td>
       <td>{item.patientLastName} &nbsp; </td>
       <td>{item.patientFirstName} &nbsp; </td>
@@ -31,6 +30,7 @@ export function TableContent(item: any, index: number) {
     </tr>
   );
 }
+*/
 
 export function TableRow({ item, index, setShowModal, isOpen }: any) {
   return (
@@ -50,6 +50,28 @@ export function TableRow({ item, index, setShowModal, isOpen }: any) {
       />    
       </td>
     </tr>
+  );
+}
+
+export function TablePayments({ context, setShowModal, isOpen }: any) {
+  return (
+    <table>
+      <thead>
+        { TableHeader() }
+      </thead>
+      <tbody>
+        {
+          context.map((item: any, index: number) => (
+            <TableRow
+            item={item}
+            index={index}
+            setShowModal={setShowModal}
+            isOpen={isOpen}
+            />
+          ))
+        }
+      </tbody>
+    </table>
   );
 }
 
@@ -83,7 +105,6 @@ export function FilterPaymentsByDates({ setStartDate, setEndDate }: any) {
             id='startDateFilter'
             onChange={({ target }) => {
               setStartDate(target.value);
-              /*console.log(target.value);*/
             }}
           />
           &nbsp;&nbsp;
@@ -93,7 +114,6 @@ export function FilterPaymentsByDates({ setStartDate, setEndDate }: any) {
             id='endDateFilter'
             onChange={({ target }) => {
             setEndDate(target.value);
-              /*console.log(target.value);*/
             }}
           />
         <br />

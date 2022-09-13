@@ -4,7 +4,8 @@ import {
   TableHeader,
   TableRow,
   CounterPayments,
-  FilterPaymentsByDates
+  FilterPaymentsByDates,
+  TablePayments
 } from '../helpers/helpers';
 import Modal from '../components/Modal';
 
@@ -44,24 +45,11 @@ function Consumer() {
             &&
             <Modal stateFunction={setShowModal} stateToSet={isOpen} />
           }
-
-          <table>
-            <thead>
-              { TableHeader() }
-            </thead>
-            <tbody>
-              {
-                context.map((item: any, index: number) => (
-                  <TableRow
-                  item={item}
-                  index={index}
-                  setShowModal={setShowModal}
-                  isOpen={isOpen}
-                  />
-                ))
-              }
-            </tbody>
-          </table>
+          <TablePayments
+            context={context}
+            setShowModal={setShowModal}
+            isOpen={isOpen}
+          />
         </span>
       )}
     </Context.Consumer>)
