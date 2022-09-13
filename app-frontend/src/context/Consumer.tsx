@@ -13,7 +13,9 @@ function Consumer() {
   const [endDate, setEndDate]: any = useState(Date.now());
 
   useEffect(() => { if (data.length !== 0) {
-    console.log('teste');
+    console.log('useEffect');
+    console.log('startDate:', Date.parse(startDate), 'sem parse:', startDate);
+    console.log('endDate:', Date.parse(endDate), 'sem parse:', endDate);
     setData(data);
   } }, [data, startDate, endDate]);
 
@@ -25,7 +27,7 @@ function Consumer() {
           Início: &nbsp;&nbsp;
           <input
             type='date'
-            id='startDate'
+            id='startDateFilter'
             onChange={({ target }) => {
               setStartDate(target.value);
               /*console.log(target.value);*/
@@ -35,14 +37,20 @@ function Consumer() {
           Final: &nbsp;&nbsp;
           <input
             type='date'
-            id='endDate'
+            id='endDateFilter'
             onChange={({ target }) => {
               setEndDate(target.value);
               /*console.log(target.value);*/
             }}
           />
           <br />
-          <h2>Total: R$ { context.reduce(
+          <h2>Total: R$ {
+            context
+            .filter(
+              (item: any)=>(
+                Date.parse(item.appointmentDate) >= Date.parse(startDate)
+                && Date.parse(item.appointmentDate) <= Date.parse(endDate)))
+            .reduce(
             (prevVal: any, curVal: any) => prevVal + curVal.paymentTotalValue,
              0,
             ).toFixed(2)
